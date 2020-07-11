@@ -10,7 +10,6 @@ type Option = {
 type RadioGroup = {
   name: string
   label: string
-  defaultValue?: string
   options: Option[]
   required?: boolean | string
 }
@@ -18,7 +17,6 @@ type RadioGroup = {
 export const RadioGroup = ({
   name,
   label,
-  defaultValue,
   options,
   required
 }: RadioGroup) => {
@@ -35,7 +33,6 @@ export const RadioGroup = ({
                 type="radio"
                 name={name}
                 className="radio__input"
-                defaultChecked={defaultValue === option.value}
                 value={option.value}
                 ref={register({ required })}
               />
