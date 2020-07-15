@@ -6,10 +6,10 @@ type Button = {
 }
 
 export const Button = ({ children }: Button) => {
-  const { formState: { dirty, isSubmitting } } = useFormContext()
+  const { formState: { isDirty, isSubmitting } } = useFormContext()
 
   return (
-    <button className="button" type="submit" disabled={!dirty || isSubmitting}>
+    <button className="button" type="submit" disabled={!isDirty || isSubmitting}>
       {children}
     </button>
   )

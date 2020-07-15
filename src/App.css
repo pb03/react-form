@@ -104,3 +104,9 @@ hr {
   color: red;
   font-size: 13px;
 }
+
+.github-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}

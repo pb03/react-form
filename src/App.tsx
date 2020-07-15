@@ -18,7 +18,6 @@ const App = () => {
 
   return (
     <div className="app">
-
       <Form className="form" onSubmit={handleSubmit}>
         <h2>Download Book</h2>
         <RadioGroup name="format" label="Format" options={radioOptions} required="Select format" />
@@ -41,6 +40,8 @@ const App = () => {
         <Checkbox name="terms" label="Accept terms of service" required="Accept terms" />
         <Button>Download</Button>
       </Form>
+
+      <p className="github-link"><a href="https://github.com/pb03/react-form">View code on GitHub</a></p>
     </div>
   )
 }

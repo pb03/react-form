@@ -1,5 +1,5 @@
 import React from 'react'
-import { useForm, FormContext } from 'react-hook-form'
+import { useForm, FormProvider } from 'react-hook-form'
 
 type Form = {
   initialValues?: any
@@ -12,7 +12,7 @@ export const Form = ({ initialValues, children, onSubmit, className }: Form) => 
   const methods = useForm({ defaultValues: initialValues })
 
   return (
-    <FormContext {...methods}>
+    <FormProvider {...methods}>
       <form
         className={className}
         onSubmit={methods.handleSubmit(onSubmit)}
@@ -20,6 +20,6 @@ export const Form = ({ initialValues, children, onSubmit, className }: Form) => 
       >
         {children}
       </form>
-    </FormContext>
+    </FormProvider>
   )
 }

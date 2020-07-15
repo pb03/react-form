@@ -25,7 +25,7 @@ export const Dropdown = ({
   placeholder = "Select...",
   required
 }: Dropdown) => {
-  const { register, setValue, getValues, errors, clearError } = useFormContext()
+  const { register, setValue, getValues, errors, clearErrors } = useFormContext()
   const error = errors[name]
 
   const getInitialItem = () => {
@@ -52,9 +52,9 @@ export const Dropdown = ({
   useEffect(() => {
     if (selectedItem) {
       setValue(name, selectedItem.value)
-      error && clearError(name)
+      error && clearErrors(name)
     }
-  }, [selectedItem, name, setValue, error, clearError])
+  }, [selectedItem, name, setValue, error, clearErrors])
 
   return (
     <div className="dropdown-container">
